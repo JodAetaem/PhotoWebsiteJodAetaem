@@ -1,0 +1,27 @@
+.Upper-navigation-bar{
+  margin-top: 0px;
+  height: 8vh;
+  width: 100vw;
+  background: green;
+  z-index: 2;
+}
+
+.navigation-button{
+  background-color: rgba(76, 175, 80, 0.44); /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+.generic-navigation-button{
+  float: left;
+  padding-right: 10%;
+  padding-top: 2%;
+}
+
+.option-button{
+  color: red;
+  float: right;
+  padding-right: 0%;
+}

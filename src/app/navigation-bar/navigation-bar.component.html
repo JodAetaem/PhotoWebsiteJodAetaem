@@ -1,0 +1,35 @@
+<div class="Upper-navigation-bar">
+
+  <div class="navigation-button">
+
+    <div class="generic-navigation-button home-button">
+      <button mat-button>
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+
+    <div class="generic-navigation-button collection-button">
+      <button mat-button>Collection</button>
+    </div>
+
+    <div class="generic-navigation-button shop-button">
+      <button mat-button>Collection</button>
+    </div>
+
+    <div class="generic-navigation-button contact-button">
+      <button mat-button>contact</button>
+    </div>
+
+    <div class="generic-navigation-button option-button">
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Language</button>
+        <button mat-menu-item>About the website</button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+</div>
