@@ -9,23 +9,28 @@
     </div>
 
     <div class="generic-navigation-button collection-button">
-      <button mat-button>Collection</button>
+      <mat-menu #collectionMenu="matMenu">
+        <button mat-menu-item *ngFor="let titre of allCollection">{{ titre.name }}</button>
+      </mat-menu>
+      <button mat-button  [matMenuTriggerFor]="collectionMenu">Collection</button>
     </div>
 
     <div class="generic-navigation-button shop-button">
-      <button mat-button>Collection</button>
+      <button mat-button>Shop</button>
     </div>
 
     <div class="generic-navigation-button contact-button">
+
       <button mat-button>contact</button>
+
     </div>
 
     <div class="generic-navigation-button option-button">
-      <mat-menu #appMenu="matMenu">
+      <mat-menu #settingsMenu="matMenu">
         <button mat-menu-item>Language</button>
         <button mat-menu-item>About the website</button>
       </mat-menu>
-      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
         <mat-icon>more_vert</mat-icon>
       </button>
     </div>

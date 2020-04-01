@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+// @ts-ignore
+import collections from '../../assets/Collections.json';
+
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  allCollection = collections.collection;
+
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
