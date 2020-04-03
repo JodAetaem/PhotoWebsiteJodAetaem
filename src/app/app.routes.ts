@@ -6,7 +6,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 export const APP_ROUTES: Routes = [
   { path: 'home', component: HomePageComponent },
-  { path: 'collection/:id', component: CollectionComponent },
+  { path: 'collection/:collectionId', component: CollectionComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'

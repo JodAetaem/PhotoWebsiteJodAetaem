@@ -10,7 +10,7 @@
 
     <div class="generic-navigation-button collection-button">
       <mat-menu #collectionMenu="matMenu">
-        <button mat-menu-item *ngFor="let titre of allCollection">{{ titre.name }}</button>
+        <button mat-menu-item *ngFor="let titre of allCollection" [routerLink]="['/collection', titre.name]">{{ titre.name }}</button>
       </mat-menu>
       <button mat-button  [matMenuTriggerFor]="collectionMenu">Collection</button>
     </div>

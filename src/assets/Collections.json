@@ -1,13 +1,18 @@
 {
   "collection": [
     {
-      "name": "Collection1"
+      "name": "Collection1",
+      "titre": "Ceci est le titre de la collection 1."
     },
     {
-      "name": "Collection2"
+      "name": "Collection2",
+      "titre": "Collection 2 : Stupeur et tremblement."
+
     },
     {
-      "name": "Collection3"
+      "name": "Collection3",
+      "titre": "Collection3 : comment faire des pates carbo sans pates."
+
     }
   ]
 }
