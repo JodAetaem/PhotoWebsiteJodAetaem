@@ -1,2 +1,7 @@
 <div *ngIf="collection"> <h1>{{collection.titre}}</h1></div>
 
+<div *ngFor="let picture of collection.files">
+  <img class="testpic" src="../../assets/Photos/{{collection.name}}/{{picture}}">
+</div>
+
+

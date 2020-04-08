@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-// @ts-ignore
+ // @ts-ignore
 import collections from '../../assets/Collections.json';
 
 @Component({
@@ -10,6 +10,7 @@ import collections from '../../assets/Collections.json';
 })
 export class CollectionComponent implements OnInit {
   collection;
+  picturesList;
 
   constructor(
     private route: ActivatedRoute
@@ -17,6 +18,7 @@ export class CollectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.getNameOfPicturesInFolder('');
     this.route.paramMap.subscribe(params => {
       this.collection = collections.collection[this.getCollectionIdFromName(params.get('collectionId'))];
     });
@@ -30,6 +32,13 @@ export class CollectionComponent implements OnInit {
       }
       id++;
     }
+  }
+
+  private getNameOfPicturesInFolder(name) {
+    this.picturesList.push('05.jpg');
+    this.picturesList.push('06.jpg');
+    this.picturesList.push('24.jpg');
+    console.log(this.picturesList);
   }
 
 }
