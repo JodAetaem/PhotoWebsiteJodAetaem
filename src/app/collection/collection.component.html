@@ -1,7 +1,13 @@
 <div *ngIf="collection"> <h1>{{collection.titre}}</h1></div>
 
-<div *ngFor="let picture of collection.files">
-  <img class="testpic" src="../../assets/Photos/{{collection.name}}/{{picture}}">
-</div>
+<mat-grid-list cols="3" [style.background]="'skyblue'" >
+  <div >
+    <mat-grid-tile *ngFor="let picture of collection.files"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
+<!--      <mat-grid-tile-footer>test</mat-grid-tile-footer>-->
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
+
 
 

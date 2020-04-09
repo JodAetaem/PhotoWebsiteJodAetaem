@@ -1,0 +1,9 @@
+.picturelist{
+  height: 40vh;
+  border: beige solid 10px;
+}
+.picturelist:hover{
+  height: 43vh;
+  border: beige solid 5px;
+}
+

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -13,12 +14,14 @@ import {MatIconModule} from '@angular/material/icon';
     CommonModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   exports: [
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule { }
