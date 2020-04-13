@@ -1,9 +1,43 @@
 .picturelist{
-  height: 40vh;
+  max-height: 60%;
+  min-height: 60%;
   border: beige solid 10px;
 }
 .picturelist:hover{
-  height: 43vh;
+  max-height: 65%;
   border: beige solid 5px;
+}
+
+.picturetestHorizontal{
+  max-height: 93%;
+  min-height: 93%;
+}
+.picturetestHorizontal:hover{
+  max-height: 95%;
+  min-height: 95%;
+}
+
+.picturetestVertical{
+  max-width: 93%;
+  min-width: 93%;
+}
+
+.picturetestVertical:hover{
+  max-width: 95%;
+  min-width: 95%;
+}
+
+.picturetestSquare{
+  max-width: 93%;
+  min-width: 93%;
+}
+
+.picturetestSquare:hover{
+  max-height: 65%;
+  min-height: 65%;
+}
+.picturetestSquareHeight{
+  max-width: 80%;
+  min-width: 80%;
 }
 

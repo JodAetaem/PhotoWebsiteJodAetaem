@@ -1,9 +1,51 @@
 <div *ngIf="collection"> <h1>{{collection.titre}}</h1></div>
 
-<mat-grid-list cols="3" [style.background]="'skyblue'" >
+<mat-grid-list cols="3"  >
   <div >
-    <mat-grid-tile *ngFor="let picture of collection.files"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
-<!--      <mat-grid-tile-footer>test</mat-grid-tile-footer>-->
+    <mat-grid-tile *ngFor="let picture of collection.files" [style.background]="'skyblue'"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
+<mat-grid-list cols="3"  >
+  <div >
+    <mat-grid-tile [style.background]="'red'"
+                   [colspan] = "2"
+                   [rowspan] = "1"> <img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'red'"
+      [colspan] = "1"
+      [rowspan] = "2"> <img  class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'red'"
+      [colspan] = "1"
+      [rowspan] = "1"><img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'red'"
+      [colspan] = "1"
+      [rowspan] = "1"><img  class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
+<mat-grid-list cols="3"  >
+  <div >
+    <mat-grid-tile [style.background]="'blue'"
+                   [colspan] = "2"
+                   [rowspan] = "1"> <img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'blue'"
+      [colspan] = "1"
+      [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'blue'"
+      [colspan] = "2"
+      [rowspan] = "1"><img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
