@@ -51,5 +51,20 @@
 </mat-grid-list>
 
 
+<mat-grid-list cols="3"  >
+  <div >
+    <mat-grid-tile [style.background]="'pink'"
+                   [colspan] = "2"
+                   [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
+    </mat-grid-tile>
+    <mat-grid-tile
+      [style.background]="'pink'"
+      [colspan] = "1"
+      [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
+
+
 
 
