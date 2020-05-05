@@ -11,7 +11,6 @@ import collectionFromJson from '../../assets/Collections.json';
 export class CollectionComponent implements OnInit {
   collection;
   photoLayout = {};
-  test = 1;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -47,6 +46,20 @@ export class CollectionComponent implements OnInit {
     );
   }
 
+
+  private getImageIdInCollection(name: string, collection: string[]) {
+    let id = 0;
+    for (const imageName of collection) {
+      if (imageName === name) {
+        return id;
+      }
+      id++;
+    }
+    throw new Error(
+      'No collection found. The URL is probably wrong'
+    );
+  }
+
   getLayoutFromPhotoName(photoName) {
     return this.photoLayout[this.getCollectionIdFromName(photoName)][0];
   }
@@ -61,21 +74,21 @@ export class CollectionComponent implements OnInit {
 
   async collectionToHVS(collectionName) {
     const collectionToExplore = collectionFromJson.collection[this.getCollectionIdFromName(collectionName)];
-    const response = [];
+    const response = new Array(collectionToExplore.files.length);
     return new Promise((resolve, reject) => {
       for (const imageName of collectionToExplore.files) {
         const img = new Image;
 
         img.onload = () => {
-          console.log(imageName + ' has been loaded');
+          console.log(imageName + ' has been loaded, for the position ');
           if (this.isHorizontal(img)) {
-            response.push('H');
+            response[this.getImageIdInCollection(imageName, collectionToExplore.files)] = 'H';
           } else if (this.isVertical(img)) {
-            response.push('V');
+            response[this.getImageIdInCollection(imageName, collectionToExplore.files)] = 'V';
           } else {
-            response.push('S');
+            response[this.getImageIdInCollection(imageName, collectionToExplore.files)] = 'S';
           }
-          if (response.length === collectionToExplore.files.length) {
+          if (!response.includes(undefined)) {
             resolve(response);
           }
         };
