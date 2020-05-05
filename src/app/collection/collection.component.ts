@@ -60,37 +60,26 @@ export class CollectionComponent implements OnInit {
   }
 
   async collectionToHVS(collectionName) {
-    const response = [];
     const collectionToExplore = collectionFromJson.collection[this.getCollectionIdFromName(collectionName)];
-    let idImage = 0;
+    const response = [];
     return new Promise((resolve, reject) => {
       for (const imageName of collectionToExplore.files) {
+        const img = new Image;
 
-        let blob = null;
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', '../../assets/Photos/' + collectionName + '/' + imageName);
-        xhr.responseType = 'blob'; // force the HTTP response, response-type header to be blob
-
-        xhr.onload = () => {
-          blob = xhr.response; // xhr.response is now a blob object
-          const file = new File([blob], imageName, {type: 'image/jpg', lastModified: Date.now()});
+        img.onload = () => {
           console.log(imageName + ' has been loaded');
-          console.log('blob object ', blob);
-          console.log('file object ', file);
-          console.log('xhr object ', xhr);
-          if (this.isHorizontal(file)) {
+          if (this.isHorizontal(img)) {
             response.push('H');
-          } else if (this.isVertical(file)) {
+          } else if (this.isVertical(img)) {
             response.push('V');
           } else {
             response.push('S');
           }
-          idImage++;
-          if (idImage === collectionToExplore.files.length) {
+          if (response.length === collectionToExplore.files.length) {
             resolve(response);
           }
         };
-        xhr.send();
+        img.src = '../../assets/Photos/' + collectionName + '/' + imageName;
       }
     });
 
