@@ -60,8 +60,8 @@ export class CollectionComponent implements OnInit {
     );
   }
 
-  getLayoutFromPhotoName(photoName) {
-    return this.photoLayout[this.getCollectionIdFromName(photoName)][0];
+  public getLayoutFromPhotoName(photoName) {
+    return this.photoLayout[this.getImageIdInCollection(photoName, this.collection.files)];
   }
 
   isHorizontal(image) {

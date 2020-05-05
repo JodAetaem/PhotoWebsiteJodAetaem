@@ -3,8 +3,8 @@
 <mat-grid-list cols="3"  >
   <div >
     <mat-grid-tile *ngFor="let picture of collection.files" [style.background]="'skyblue'"
-                   [colspan] = "1"
-                   [rowspan] = "1"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
+                   [colspan] = "getLayoutFromPhotoName(picture)[0]"
+                   [rowspan] = "getLayoutFromPhotoName(picture)[1]"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
