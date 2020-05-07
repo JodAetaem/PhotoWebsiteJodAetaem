@@ -77,7 +77,7 @@ export class CollectionComponent implements OnInit {
     const response = new Array(collectionToExplore.files.length);
     return new Promise((resolve, reject) => {
       for (const imageName of collectionToExplore.files) {
-        const img = new Image;
+        const img = new Image();
 
         img.onload = () => {
           console.log(imageName + ' has been loaded, for the position ');
@@ -115,51 +115,54 @@ export class CollectionComponent implements OnInit {
           leftToTreat = collectionOrientation.length - idImage;
           if (leftToTreat <= 2) {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([2, 2]);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([2, 2, 'pictureVertical']);
             } else {
-              pageLayoutResponse.push([2, 2]);
-              pageLayoutResponse.push([1, 2]);
+              pageLayoutResponse.push([2, 2, 'pictureVertical']);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
             }
             idImage = idImage + 2;
           } else if (leftToTreat === 4) {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'V') {
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([1, 1]);
-              pageLayoutResponse.push([1, 1]);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
               idImage = idImage + 4;
             } else if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([2, 1]);
-              pageLayoutResponse.push([1, 1]);
-              pageLayoutResponse.push([1, 1]);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
               idImage = idImage + 4;
             } else {
-              pageLayoutResponse.push([2, 1]);
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([1, 1]);
-              pageLayoutResponse.push([1, 1]);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
               idImage = idImage + 4;
             }
-          } else if (leftToTreat > 11) {
-            pageLayoutResponse.push([1, 1]);
-            pageLayoutResponse.push([1, 1]);
-            pageLayoutResponse.push([1, 1]);
-            pageLayoutResponse.push([1, 1]);
-            pageLayoutResponse.push([1, 1]);
-            pageLayoutResponse.push([1, 1]);
+          } else if (leftToTreat === 6) {
+            let iterator = 0;
+            while (iterator !== 6) {
+              if (collectionOrientation[idImage + iterator] === 'V') {
+                pageLayoutResponse.push([1, 1, 'pictureSquareHeight']);
+              } else {
+                pageLayoutResponse.push([1, 1, 'pictureSquare']);
+              }
+              iterator++;
+            }
             idImage = idImage + 6;
           } else {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([2, 1]);
-              pageLayoutResponse.push([2, 1]);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
               idImage = idImage + 3;
             } else {
-              pageLayoutResponse.push([2, 1]);
-              pageLayoutResponse.push([1, 2]);
-              pageLayoutResponse.push([2, 1]);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
+              pageLayoutResponse.push([1, 2, 'pictureVertical']);
+              pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
               idImage = idImage + 3;
             }
           }

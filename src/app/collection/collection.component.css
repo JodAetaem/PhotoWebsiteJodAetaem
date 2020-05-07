@@ -8,36 +8,42 @@
   border: beige solid 5px;
 }
 
-.picturetestHorizontal{
+.pictureHorizontal{
   max-height: 93%;
   min-height: 93%;
 }
-.picturetestHorizontal:hover{
+.pictureHorizontal:hover{
   max-height: 95%;
   min-height: 95%;
 }
 
-.picturetestVertical{
+.pictureVertical{
   max-width: 93%;
   min-width: 93%;
 }
 
-.picturetestVertical:hover{
+.pictureVertical:hover{
   max-width: 95%;
   min-width: 95%;
 }
 
-.picturetestSquare{
-  max-width: 93%;
-  min-width: 93%;
+.pictureSquare{
+  max-height: 60%;
+  min-height: 60%;
 }
 
-.picturetestSquare:hover{
+.pictureSquare:hover{
   max-height: 65%;
   min-height: 65%;
 }
-.picturetestSquareHeight{
-  max-width: 80%;
-  min-width: 80%;
+
+.pictureSquareHeight{
+  max-width: 60%;
+  min-width: 60%;
+}
+
+.pictureSquareHeight:hover{
+  max-width: 65%;
+  min-width: 65%;
 }
 

@@ -4,7 +4,7 @@
   <div >
     <mat-grid-tile *ngFor="let picture of collection.files" [style.background]="'skyblue'"
                    [colspan] = "getLayoutFromPhotoName(picture)[0]"
-                   [rowspan] = "getLayoutFromPhotoName(picture)[1]"> <img class="picturelist" src="../../assets/Photos/{{collection.name}}/{{picture}}">
+                   [rowspan] = "getLayoutFromPhotoName(picture)[1]"> <img class="{{getLayoutFromPhotoName(picture)[2]}}" src="../../assets/Photos/{{collection.name}}/{{picture}}">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
@@ -13,22 +13,22 @@
   <div >
     <mat-grid-tile [style.background]="'red'"
                    [colspan] = "2"
-                   [rowspan] = "1"> <img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
+                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'red'"
       [colspan] = "1"
-      [rowspan] = "2"> <img  class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'red'"
       [colspan] = "1"
-      [rowspan] = "1"><img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
+      [rowspan] = "1"><img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'red'"
       [colspan] = "1"
-      [rowspan] = "1"><img  class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
@@ -37,17 +37,17 @@
   <div >
     <mat-grid-tile [style.background]="'blue'"
                    [colspan] = "2"
-                   [rowspan] = "1"> <img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
+                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'blue'"
       [colspan] = "1"
-      [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'blue'"
       [colspan] = "2"
-      [rowspan] = "1"><img class="picturetestHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
+      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
@@ -57,12 +57,12 @@
   <div >
     <mat-grid-tile [style.background]="'pink'"
                    [colspan] = "2"
-                   [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
+                   [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
     </mat-grid-tile>
     <mat-grid-tile
       [style.background]="'pink'"
       [colspan] = "1"
-      [rowspan] = "2"> <img class="picturetestVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
+      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
