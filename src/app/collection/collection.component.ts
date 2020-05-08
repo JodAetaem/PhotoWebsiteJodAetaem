@@ -98,6 +98,17 @@ export class CollectionComponent implements OnInit {
 
   }
 
+  addTwoSquarePictureToPageLayoutResponse(collectionOrientation, pageLayoutResponse, idImage) {
+
+    for (let i = 0; i !== 2; i++) {
+      if (collectionOrientation[idImage + 2 + i] === 'V') {
+        pageLayoutResponse.push([1, 1, 'pictureSquareHeight']);
+      } else {
+        pageLayoutResponse.push([1, 1, 'pictureSquare']);
+      }
+    }
+  }
+
   initPhotoLayout(collectionName) {
 
     return new Promise((resolve, reject) => {
@@ -116,33 +127,34 @@ export class CollectionComponent implements OnInit {
           if (leftToTreat <= 2) {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
-              pageLayoutResponse.push([2, 2, 'pictureVertical']);
+              pageLayoutResponse.push([2, 2, 'pictureHorizontal']);
             } else {
-              pageLayoutResponse.push([2, 2, 'pictureVertical']);
+              if (collectionOrientation[idImage] === 'V') {
+                pageLayoutResponse.push([2, 2, 'pictureHorizontal']);
+              } else {
+                pageLayoutResponse.push([2, 2, 'pictureVertical']);
+              }
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
             }
             idImage = idImage + 2;
-          } else if (leftToTreat === 4) {
+          } else if (leftToTreat >= 4 && leftToTreat <= 7) {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'V') {
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              this.addTwoSquarePictureToPageLayoutResponse(collectionOrientation, pageLayoutResponse, idImage);
               idImage = idImage + 4;
             } else if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
               pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              this.addTwoSquarePictureToPageLayoutResponse(collectionOrientation, pageLayoutResponse, idImage);
               idImage = idImage + 4;
             } else {
               pageLayoutResponse.push([2, 1, 'pictureHorizontal']);
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
-              pageLayoutResponse.push([1, 1, 'pictureHorizontal']);
+              this.addTwoSquarePictureToPageLayoutResponse(collectionOrientation, pageLayoutResponse, idImage);
               idImage = idImage + 4;
             }
-          } else if (leftToTreat === 6) {
+          } else if (leftToTreat > 11) {
             let iterator = 0;
             while (iterator !== 6) {
               if (collectionOrientation[idImage + iterator] === 'V') {
@@ -153,6 +165,13 @@ export class CollectionComponent implements OnInit {
               iterator++;
             }
             idImage = idImage + 6;
+          } else if (leftToTreat === 1) {
+            if (collectionOrientation[idImage] === 'V') {
+              pageLayoutResponse.push([2, 2, 'pictureHorizontal']);
+            } else {
+              pageLayoutResponse.push([2, 2, 'pictureVertical']);
+            }
+            idImage++;
           } else {
             if (collectionOrientation[idImage] === 'V' && collectionOrientation[idImage + 1] === 'H') {
               pageLayoutResponse.push([1, 2, 'pictureVertical']);
