@@ -1,3 +1,6 @@
+.collection-grid-tile{
+}
+
 .picturelist{
   max-height: 60%;
   min-height: 60%;
@@ -11,39 +14,79 @@
 .pictureHorizontal{
   max-height: 93%;
   min-height: 93%;
+  transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  padding: 12px;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  -webkit-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -moz-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -o-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
 }
 .pictureHorizontal:hover{
   max-height: 95%;
   min-height: 95%;
+  padding: 4px;
+  border: 6px solid black;
 }
 
 .pictureVertical{
   max-width: 93%;
   min-width: 93%;
+  transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  padding: 12px;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  -webkit-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -moz-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -o-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
 }
 
 .pictureVertical:hover{
   max-width: 95%;
   min-width: 95%;
+  padding: 4px;
+  border: 6px solid black;
 }
 
 .pictureSquare{
   max-height: 60%;
   min-height: 60%;
+  transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  padding: 12px;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  -webkit-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -moz-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -o-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
 }
 
 .pictureSquare:hover{
   max-height: 65%;
   min-height: 65%;
+  padding: 4px;
+  border: 6px solid black;
 }
 
 .pictureSquareHeight{
   max-width: 60%;
   min-width: 60%;
+  transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  padding: 12px;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  -webkit-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -moz-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
+  -o-transition: max-height 0.25s ease, padding 0.2s ease, border 0.2s ease;
 }
 
 .pictureSquareHeight:hover{
   max-width: 65%;
   min-width: 65%;
+  padding: 4px;
+  border: 6px solid black;
 }
 

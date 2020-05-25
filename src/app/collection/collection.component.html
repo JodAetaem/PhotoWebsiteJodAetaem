@@ -2,70 +2,70 @@
 
 <mat-grid-list cols="3"  >
   <div >
-    <mat-grid-tile *ngFor="let picture of collection.files" [style.background]="'skyblue'"
+    <mat-grid-tile class="collection-grid-tile" *ngFor="let picture of collection.files" [style.background]="'#1fe0'"
                    [colspan] = "getLayoutFromPhotoName(picture)[0]"
                    [rowspan] = "getLayoutFromPhotoName(picture)[1]"> <img class="{{getLayoutFromPhotoName(picture)[2]}}" src="../../assets/Photos/{{collection.name}}/{{picture}}">
     </mat-grid-tile>
   </div>
 </mat-grid-list>
 
-<mat-grid-list cols="3"  >
-  <div >
-    <mat-grid-tile [style.background]="'red'"
-                   [colspan] = "2"
-                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'red'"
-      [colspan] = "1"
-      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'red'"
-      [colspan] = "1"
-      [rowspan] = "1"><img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'red'"
-      [colspan] = "1"
-      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
-    </mat-grid-tile>
-  </div>
-</mat-grid-list>
+<!--<mat-grid-list cols="3"  >-->
+<!--  <div >-->
+<!--    <mat-grid-tile [style.background]="'red'"-->
+<!--                   [colspan] = "2"-->
+<!--                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'red'"-->
+<!--      [colspan] = "1"-->
+<!--      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'red'"-->
+<!--      [colspan] = "1"-->
+<!--      [rowspan] = "1"><img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'red'"-->
+<!--      [colspan] = "1"-->
+<!--      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">-->
+<!--    </mat-grid-tile>-->
+<!--  </div>-->
+<!--</mat-grid-list>-->
 
-<mat-grid-list cols="3"  >
-  <div >
-    <mat-grid-tile [style.background]="'blue'"
-                   [colspan] = "2"
-                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'blue'"
-      [colspan] = "1"
-      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'blue'"
-      [colspan] = "2"
-      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">
-    </mat-grid-tile>
-  </div>
-</mat-grid-list>
+<!--<mat-grid-list cols="3"  >-->
+<!--  <div >-->
+<!--    <mat-grid-tile [style.background]="'blue'"-->
+<!--                   [colspan] = "2"-->
+<!--                   [rowspan] = "1"> <img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'blue'"-->
+<!--      [colspan] = "1"-->
+<!--      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'blue'"-->
+<!--      [colspan] = "2"-->
+<!--      [rowspan] = "1"><img class="pictureHorizontal" src="../../assets/Photos/{{collection.name}}/05.jpg">-->
+<!--    </mat-grid-tile>-->
+<!--  </div>-->
+<!--</mat-grid-list>-->
 
 
-<mat-grid-list cols="3"  >
-  <div >
-    <mat-grid-tile [style.background]="'pink'"
-                   [colspan] = "2"
-                   [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">
-    </mat-grid-tile>
-    <mat-grid-tile
-      [style.background]="'pink'"
-      [colspan] = "1"
-      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">
-    </mat-grid-tile>
-  </div>
-</mat-grid-list>
+<!--<mat-grid-list cols="3"  >-->
+<!--  <div >-->
+<!--    <mat-grid-tile [style.background]="'pink'"-->
+<!--                   [colspan] = "2"-->
+<!--                   [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/05.jpg">-->
+<!--    </mat-grid-tile>-->
+<!--    <mat-grid-tile-->
+<!--      [style.background]="'pink'"-->
+<!--      [colspan] = "1"-->
+<!--      [rowspan] = "2"> <img class="pictureVertical" src="../../assets/Photos/{{collection.name}}/61890009~2.JPG">-->
+<!--    </mat-grid-tile>-->
+<!--  </div>-->
+<!--</mat-grid-list>-->
 
 
 
