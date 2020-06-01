@@ -2,30 +2,31 @@
 
   <div class="navigation-button">
 
-    <div class="generic-navigation-button home-button">
+    <div class="generic-navigation-button home-button animated-Border-On-Hover">
       <button mat-button [routerLink]="['/home']">
         <mat-icon>home</mat-icon>
+        Home
       </button>
     </div>
 
-    <div class="generic-navigation-button collection-button">
+    <div class="generic-navigation-button collection-button animated-Border-On-Hover">
       <mat-menu #collectionMenu="matMenu">
         <button mat-menu-item *ngFor="let titre of allCollection" [routerLink]="['/collection', titre.name]">{{ titre.name }}</button>
       </mat-menu>
       <button mat-button  [matMenuTriggerFor]="collectionMenu">Collection</button>
     </div>
 
-    <div class="generic-navigation-button shop-button">
+    <div class="generic-navigation-button shop-button animated-Border-On-Hover">
       <button mat-button [routerLink]="['/shop']">Shop</button>
     </div>
 
-    <div class="generic-navigation-button contact-button">
+    <div class="generic-navigation-button contact-button animated-Border-On-Hover">
 
-      <button mat-button [routerLink]="['/contact']" >contact</button>
+      <button mat-button [routerLink]="['/contact']" >Contact</button>
 
     </div>
 
-    <div class="generic-navigation-button option-button">
+    <div class="generic-navigation-button option-button ">
       <mat-menu #settingsMenu="matMenu">
         <button mat-menu-item>Language</button>
         <button mat-menu-item [routerLink]="['/about']">About the website</button>

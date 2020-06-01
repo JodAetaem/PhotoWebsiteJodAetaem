@@ -1,24 +1,26 @@
 .Upper-navigation-bar{
+  text-align: center;
   margin-top: 0px;
   height: 8vh;
   width: 99vw;
-  background: green;
+  /*background: green;*/
   z-index: 2;
 }
 
 .navigation-button{
-  background-color: rgba(76, 175, 80, 0.44); /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
+  /*background-color: rgba(76, 175, 80, 0.44); !* Green background *!*/
+  border-bottom: 1px solid gray; /* Green border */
+  color: black; /* White text */
   padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
 }
 
 .generic-navigation-button{
   display: inline-block;
   list-style: outside none none;
   margin: .5em 1em;
-  paddin: 0;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .option-button{
@@ -26,3 +28,54 @@
   float: right;
   padding-right: 0%;
 }
+
+/*@media only screen and (max-width: 760px) {*/
+/*  .navigation-button {*/
+/*    background-color: lightblue;*/
+/*  }*/
+/*}*/
+
+
+
+/*!*------------------------------------------------------------ Mobile Ready*!*/
+/*::ng-deep .mat-button,*/
+/*::ng-deep .mat-icon{*/
+/*  font-size:20px !important;*/
+/*}*/
+
+/*.animated-Border-On-Hover::before,*/
+/*.animated-Border-On-Hover::after {*/
+/*  content: '';*/
+/*  height: 14px;*/
+/*  width: 14px;*/
+/*  position: absolute;*/
+/*  transition: all .35s ease;*/
+/*  opacity: 0;*/
+/*}*/
+
+/*.animated-Border-On-Hover::before {*/
+/*  content: '';*/
+/*  right: 0;*/
+/*  top: 0;*/
+/*  border-top: 3px solid #545454;*/
+/*  border-right: 3px solid #424242;*/
+/*  transform: translate(-100%, 50%);*/
+/*}*/
+
+/*.animated-Border-On-Hover:after {*/
+/*  content: '';*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  border-bottom: 3px solid #545454;*/
+/*  border-left: 3px solid #424242;*/
+/*  transform: translate(100%, -50%)*/
+/*}*/
+
+/*.animated-Border-On-Hover:hover:before,*/
+/*.animated-Border-On-Hover:hover:after{*/
+/*  transform: translate(0,0);*/
+/*  opacity: 1;*/
+/*}*/
+
+/*.animated-Border-On-Hover:hover {*/
+/*}*/
